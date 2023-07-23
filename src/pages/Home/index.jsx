@@ -19,7 +19,7 @@ const Home = () => {
       'tiers[0]': '1',
       orderBy: 'marketCap',
       orderDirection: 'desc',
-      limit: '50',
+      limit: '600',
       offset: '0',
     },
     headers: {
