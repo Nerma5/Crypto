@@ -1,0 +1,55 @@
+.Home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  .Home-image {
+    height: 60vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .coins-table {
+    width: 80%;
+    border-collapse: collapse;
+
+    th {
+      text-align: left;
+      padding: 10px;
+      font-style: italic;
+      font-size: 18px;
+
+      &:hover {
+        font-style: normal;
+        font-weight: bold;
+      }
+    }
+
+    .coin-name {
+      font-style: italic;
+
+      &:hover {
+        font-style: normal;
+      }
+    }
+
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      font-size: 18px;
+
+      .fav {
+        color: red;
+      }
+      .calculate {
+        color: blue;
+      }
+
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+}
