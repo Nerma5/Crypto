@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
 import { NavLink } from 'react-router-dom';
-import { Favorite } from '@mui/icons-material';
+import { FavoriteOutlined } from '@mui/icons-material';
 import { Avatar } from '@mui/material';
 
 const Nav = () => {
@@ -21,7 +21,7 @@ const Nav = () => {
         <NavLink to="/exchanges">Exchanges</NavLink>
         <NavLink to="/about">About us</NavLink>
         <NavLink to="/fav">
-          <Favorite />
+          <FavoriteOutlined />
         </NavLink>
       </div>
       <div className="profile">

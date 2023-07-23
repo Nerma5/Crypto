@@ -1,0 +1,29 @@
+.input-field {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 0.5rem;
+  padding-right: 50px;
+  background-color: #374151;
+  color: rgb(162, 162, 162);
+
+  .search-icon {
+    height: 24px;
+    background-color: #374151;
+    padding: 0 5px;
+  }
+
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: #374151;
+    font-size: 16px;
+    color: rgb(162, 162, 162);
+
+    &::placeholder {
+      color: rgb(162, 162, 162);
+    }
+  }
+}
