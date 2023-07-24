@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './index.scss';
 import { NavLink, useParams } from 'react-router-dom';
 import chart from './single-line-chart.png';
@@ -29,6 +29,10 @@ const SingleCoin = ({ coinData }) => {
   if (!coin) {
     return <p>Invalid coin UUID.</p>;
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="SingleCoin">
