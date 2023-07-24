@@ -4,6 +4,7 @@ import SearchBar from '../../components/SearchBar';
 import axios from 'axios';
 import { FavoriteOutlined, Calculate } from '@mui/icons-material';
 import image from './crypto_set.jpg';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -83,12 +84,18 @@ const Home = () => {
               <tr key={coin.uuid}>
                 <td>{coin.rank}</td>
                 <td>
-                  <img
-                    width="50"
-                    height="50"
-                    src={coin.iconUrl}
-                    alt={coin.name}
-                  />
+                  <Link
+                    to={`/coins/${coin.uuid}?name=${encodeURIComponent(
+                      coin.name
+                    )}`}
+                  >
+                    <img
+                      width="50"
+                      height="50"
+                      src={coin.iconUrl}
+                      alt={coin.name}
+                    />
+                  </Link>
                 </td>
                 <td className="coin-name">{coin.name}</td>
                 <td style={{ fontWeight: 'bold' }}>

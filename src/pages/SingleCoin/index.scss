@@ -1,0 +1,82 @@
+.SingleCoin {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 21px;
+
+  .chart {
+    width: 100%;
+    height: 60vh;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid lightblue;
+    padding: 20px 0;
+
+    div {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin: 0 12px;
+        font-size: 21px;
+      }
+
+      a {
+        margin: 0 12px;
+        color: #3b82f6;
+        font-size: 21px;
+      }
+    }
+  }
+
+  .price-chart {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid lightblue;
+    padding: 35px 0 15px 0;
+  }
+
+  .more-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 24px;
+
+    .value-stats {
+      width: 90%;
+
+      svg {
+        color: #3b82f6;
+        width: 34px;
+        height: 34px;
+      }
+
+      h2 {
+        margin-top: 18px;
+        text-align: center;
+      }
+    }
+
+    .supply-info {
+      width: 90%;
+
+      .links {
+        svg {
+          color: #3b82f6;
+        }
+      }
+
+      svg {
+        height: 36px;
+        width: 36px;
+      }
+
+      h2 {
+        margin-top: 18px;
+        text-align: center;
+      }
+    }
+  }
+}
