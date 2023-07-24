@@ -4,6 +4,7 @@ import SearchBar from '../../components/SearchBar/index';
 import { Pagination } from '@mui/material';
 import axios from 'axios';
 import { Calculate, FavoriteOutlined } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 const Coins = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -90,12 +91,18 @@ const Coins = () => {
                 <tr key={coin.uuid}>
                   <td>{coin.rank}</td>
                   <td>
-                    <img
-                      width="50"
-                      height="50"
-                      src={coin.iconUrl}
-                      alt={coin.name}
-                    />
+                    <Link
+                      to={`/coins/${coin.uuid}?name=${encodeURIComponent(
+                        coin.name
+                      )}`}
+                    >
+                      <img
+                        width="50"
+                        height="50"
+                        src={coin.iconUrl}
+                        alt={coin.name}
+                      />
+                    </Link>
                   </td>
                   <td className="coin-name">{coin.name}</td>
                   <td style={{ fontWeight: 'bold' }}>
