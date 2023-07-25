@@ -1,0 +1,53 @@
+.app__exchanges{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%; 
+}
+  
+.app__exchanges-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;  
+}
+  
+.app__exchanges-result{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid black;
+     
+      
+      p{
+          margin: 1.5rem 5rem;
+          text-align: center;
+          font-family: Open Sans;
+          font-size: 19px;
+      }
+  
+      a{
+          text-decoration: none;
+          color: black;
+          padding: 1rem 15rem;
+          font-family: Open Sans;
+      }
+  
+      a:hover{
+          background-color: #4903fc;
+          border-radius: 15px;
+          color: #fff;
+          
+          
+    }
+      
+}
+  
+.app__exchanges-result img{
+      width: 50px;
+      height: 50px;
+      
+}
+  
+  
