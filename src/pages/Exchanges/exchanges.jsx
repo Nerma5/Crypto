@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './exchanges.scss';
-import '../Data/index';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import "./exchanges.scss";
+import "../Data/index";
 
 const Exchanges = () => {
   const [exchanges, setExchanges] = useState([]);
@@ -10,7 +10,7 @@ const Exchanges = () => {
 
   useEffect(() => {
     axios
-      .get('https://coinranking1.p.rapidapi.com/coin/Qwsogvtv82FCd/exchanges')
+      .get("https://coinranking1.p.rapidapi.com/coin/Qwsogvtv82FCd/exchanges")
       .then(async (res) => {
         console.log(res.data);
         console.log(exchanges);
@@ -25,12 +25,13 @@ const Exchanges = () => {
 
   const indexOfLastExchange = currentPage * exchangesPerPage;
   const indexOfFirstExchange = indexOfLastExchange - exchangesPerPage;
-  const currentExchanges = exchanges.slice(indexOfFirstExchange, indexOfLastExchange);
+  const currentExchanges = exchanges.slice(
+    indexOfFirstExchange,
+    indexOfLastExchange
+  );
 
-  
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
- 
   const renderPageNumbers = () => {
     const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(exchanges.length / exchangesPerPage); i++) {
@@ -44,21 +45,32 @@ const Exchanges = () => {
   };
 
   return (
-    <div className='app__exchanges'>
-      <div className='app__exchanges-content'>
-        {currentExchanges.map((el) => (
-          <div className='app__exchanges-result' key={el.id}>
-            <img src={el.iconUrl} alt="exchange_img" />
-            <p>#{el.rank}</p>
-            <p>{el.name}</p>
-            <p style={{ fontWeight: 'bolder' }}>$ {el.price}</p>
-            <a href={el.coinrankingUrl} target='_blank'>Open Exchange</a>
-          </div>
-        ))}
-      </div>
-      <ul className="pagination">
-        {renderPageNumbers()}
-      </ul>
+    <div className="app__exchanges">
+      <table className="app__exchanges-content">
+        <tbody>
+          {currentExchanges.map((el) => (
+            <tr className="app__exchanges-result" key={el.id}>
+              <td>
+                <img src={el.iconUrl} alt="exchange_img" />
+              </td>
+              <td>#{el.rank}</td>
+              <td>{el.name}</td>
+              <td style={{ fontWeight: "bolder" }}>
+                ${" "}
+                {parseFloat(el.price)
+                  .toFixed(3)
+                  .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              </td>
+              <td>
+                <a href={el.coinrankingUrl} target="_blank">
+                  Open Exchange
+                </a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <ul className="pagination">{renderPageNumbers()}</ul>
     </div>
   );
 };
