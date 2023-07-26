@@ -3,7 +3,7 @@ import Home from './pages/Home/index';
 import Fav from './pages/Fav/index';
 import Profile from './pages/Profile/index';
 import Coins from './pages/Coins/index';
-import Exchanges from './pages/Exchanges/index';
+import Exchanges from './pages/Exchanges/exchanges';
 import About from './pages/About/index';
 import Nav from './components/Nav/index';
 import Footer from './components/Footer/index';
