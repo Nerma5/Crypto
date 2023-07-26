@@ -50,4 +50,18 @@
       
 }
   
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 2rem;
+}
+
+.pagination li {
+  cursor: pointer;
+  margin-right: 4rem;
+}
+
+.pagination li:last-child {
+  margin-right: 0;
+}
   
