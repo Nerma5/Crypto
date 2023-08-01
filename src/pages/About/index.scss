@@ -1,0 +1,180 @@
+.covidText {
+  text-align: center;
+  font-size: 19px;
+  margin-top: 60px;
+}
+.cards {
+  margin: 20vh 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: space-evenly;
+
+  .cardText {
+    border: none;
+    border-radius: 50px;
+    width: 400px;
+    height: 200px;
+    transition: 1s;
+    position: relative;
+    animation: CardAnim1 1s ease 0s 1 normal forwards;
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px grey;
+  }
+  @keyframes CardAnim1 {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .cardText:hover {
+    height: 550px;
+    transition: 0.8s;
+  }
+  .cardText:hover .slika {
+    margin-bottom: 50px;
+  }
+
+  .cardText:hover .imgS {
+    margin-top: -50px;
+    transition: 0.8s;
+  }
+  .name {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    align-items: center;
+    font-size: 50px;
+  }
+  &:hover .text {
+    border: none;
+    width: 400px;
+    display: block;
+    padding: 0 3vw;
+    transition: opacity 0.3s ease;
+    animation: textanim 1s ease 0s 1 normal forwards;
+  }
+  .text {
+    border: 1px solid;
+    display: none;
+  }
+  @keyframes textanim {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  .profesija {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Brush Script MT", cursive;
+  }
+  .divIkone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 40px;
+  }
+
+  /* u ovom delu se nalaze ikone */
+  .ikona {
+    font-size: 24px;
+    transition: 0.2s;
+    cursor: pointer;
+    color: black;
+  }
+  .ikona:hover {
+    color: red;
+    transition: 0.5s;
+    transform: scale(1.5);
+  }
+
+  /* kartica 2 */
+  .cardText2 {
+    border: none;
+    border-radius: 50px;
+    width: 400px;
+    height: 200px;
+    transition: 1s;
+    position: relative;
+    animation: CardAnim 1s ease 0s 1 normal forwards;
+    background-color: white;
+    margin-top: -50px;
+    box-shadow: 0px 0px 20px 0px grey;
+  }
+  @keyframes CardAnim {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .cardText2:hover {
+    height: 500px;
+    transition: 0.8s;
+  }
+  .cardText2:hover .text {
+    border: none;
+    width: 400px;
+    height: 250px;
+    display: block;
+    transition: opacity 0.3s ease;
+    transition: 0.5s;
+    animation: textanim 1s ease 0s 1 normal forwards;
+  }
+
+  /* kartica 3 */
+  .cardText3 {
+    border: none;
+    border-radius: 50px;
+    width: 400px;
+    height: 200px;
+    transition: 1s;
+    position: relative;
+    animation: CardAnim3 1s ease 0s 1 normal forwards;
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px grey;
+  }
+  @keyframes CardAnim3 {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .cardText:hover {
+    height: 500px;
+    transition: 0.8s;
+  }
+  .cardText:hover .text {
+    border: none;
+    width: 400px;
+    height: 250px;
+    display: block;
+    transition: opacity 0.3s ease;
+    transition: 0.5s;
+    animation: textanim 1s ease 0s 1 normal forwards;
+  }
+}
