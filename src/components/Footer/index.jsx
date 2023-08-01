@@ -13,7 +13,7 @@ const Footer = () => {
       </div>
       <span>
         Crypto app made by: Remzo Gusinac, Umer Sacirovic, Edin Mavric, Nerma
-        Hot, Mensur Mavric, Ensar Vragic;
+        Hot, Hamza Zukovic, Ensar Vragic;
       </span>
       <span>© 2022 Crypto App</span>
     </div>

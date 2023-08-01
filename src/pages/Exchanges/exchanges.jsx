@@ -6,7 +6,7 @@ import "../Data/index";
 const Exchanges = () => {
   const [exchanges, setExchanges] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const exchangesPerPage = 10; // Promijeni ovu vrijednost prema želji
+  const exchangesPerPage = 10;
 
   useEffect(() => {
     axios
@@ -18,10 +18,6 @@ const Exchanges = () => {
       })
       .catch((err) => console.log(err));
   }, []);
-
-  if (!exchanges || exchanges.length === 0) {
-    return <div>Loading...</div>;
-  }
 
   const indexOfLastExchange = currentPage * exchangesPerPage;
   const indexOfFirstExchange = indexOfLastExchange - exchangesPerPage;
@@ -44,7 +40,12 @@ const Exchanges = () => {
     return pageNumbers;
   };
 
-  return (
+  return exchanges.lenght > 0 ? (
+    <div className="loading-spinner">
+      <div className="spinner"></div>
+      Loading...
+    </div>
+  ) : (
     <div className="app__exchanges">
       <table className="app__exchanges-content">
         <tbody>
